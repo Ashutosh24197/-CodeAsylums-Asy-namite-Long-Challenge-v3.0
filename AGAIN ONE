@@ -1,0 +1,17 @@
+import math
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        n = int(input())
+        ans =int(0);
+        check=True
+        while(n>0):
+            num=int(2**(int(math.log2(n))));
+            ans+=int((num/2)*(int(math.log2(n))))
+            if check:
+                n=n-num+1
+                check=False
+            else:
+                n=n-num
+            ans+=n
+        print(ans)
+            
